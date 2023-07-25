@@ -1,2 +1,0 @@
-# HarvardCourse
-Harvard's course
