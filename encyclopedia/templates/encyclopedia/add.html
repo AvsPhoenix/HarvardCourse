@@ -1,0 +1,28 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <h1>Add new item to Wiki Encyclopedia</h1>
+
+    <div style="max-height: 350px; max-width: 600px;">
+        <form action="{% url 'wiki:index' %}" method="post">
+            {% csrf_token %}
+
+            <div class="contenedor">            
+                <div>
+                    <p> Subject: </p> {{ form.subject }}
+                </div>
+                
+                <div>
+                    <p>Text: </p> {{ form.info }}
+                </div>
+            </div>
+            
+            <input type="submit" value="Aceptar">
+        </form>
+    </div>   
+
+{% endblock %}

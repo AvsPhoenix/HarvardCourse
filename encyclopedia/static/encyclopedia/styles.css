@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+/*
+textarea {
+    height: 60px;
+    width: 80%;
+}
+*/
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+
+.contenedor
+{
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: 400px;
+    margin-top: 30px;
+}
+
+.contenedor > div
+{
+    min-width: 300px;
+    text-align: left;
+    vertical-align: top;
+    min-height: 50px;
+    width: 400px;
+}
