@@ -57,3 +57,18 @@ textarea {
     min-height: 50px;
     width: 400px;
 }
+
+
+#btnEdit
+{
+    color: #FFFFFF;
+    box-shadow: none; 
+    border: 1px solid #3079ed; 
+    border-radius: 2px;
+    font-weight: bold;
+    text-align: center;
+    outline: 0;
+    font-size: 20px;
+    height: 30px;
+    width: 250px;
+}

@@ -5,7 +5,11 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
+    {% if item_selected == True %}
+        <h1>Item selected: {{ title }}</h1>        
+    {% else %}
+        <h1>All Pages</h1>
+    {% endif %}
     <ul>
         {% for entry in entries %}
             <li> <a href="{% url 'wiki:index' %}{{ entry }}"> {{ entry }} </a> </li>
@@ -15,7 +19,22 @@
     {% if definition == "" %}
         <h1>No data found</h1>
     {% else %}
-        {{ definition }}
+
+        {% autoescape off %}
+            {{ definition }}
+        {% endautoescape %}
+
+        {% if item_selected == True %}
+
+            <br/><br/>
+            <div id="btnEdit">
+                <a href="{% url 'wiki:edit' item=title %}"> Edit </a>
+            </div>
+        {% endif %}        
+        
+
     {% endif %}
+
+    
 
 {% endblock %}
